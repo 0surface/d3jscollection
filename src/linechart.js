@@ -77,7 +77,7 @@ const Linechart = () => {
           xValue={xValue}
           yValue={yValue}
           toolTipFormat={xAxisTickFormat}
-          circleRadius={4}
+          circleRadius={3}
         />
       </g>
     </svg>
