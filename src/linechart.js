@@ -1,5 +1,5 @@
 import React from 'react'
-import { scaleLinear, format, min, max } from 'd3'
+import { scaleLinear, scaleTime, timeFormat, min, max } from 'd3'
 import './styles/global.css'
 import { useData } from './components/linechart/useData'
 import { AxisBottom } from './components/linechart/AxisBottom'
@@ -16,7 +16,7 @@ const yAxisLabelOffset = 40
 
 const Linechart = () => {
   const data = useData(csvUrl)
-  console.log('data::', data)
+
   if (!data) {
     return <pre>Loading...</pre>
   }
@@ -30,17 +30,16 @@ const Linechart = () => {
   const yValue = (d) => d.temperature
   const yAxisLabel = 'Temperature'
 
-  const siFormat = format('.2s')
-  const xAxisTickFormat = (tickValue) => siFormat(tickValue).replace('G', 'B')
+  const xAxisTickFormat = timeFormat('%a')
 
-  const xScale = scaleLinear()
+  const xScale = scaleTime()
     .domain([min(data, xValue), max(data, xValue)])
     .range([0, innerWidth])
     .nice()
 
   const yScale = scaleLinear()
     .domain([min(data, yValue), max(data, yValue)])
-    .range([0, innerHeight])
+    .range([innerHeight, 0])
 
   return (
     <svg width={width} height={height}>
@@ -78,7 +77,7 @@ const Linechart = () => {
           xValue={xValue}
           yValue={yValue}
           toolTipFormat={xAxisTickFormat}
-          circleRadius={7}
+          circleRadius={4}
         />
       </g>
     </svg>
