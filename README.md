@@ -10,4 +10,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![D3.js_Barchart](/public/images/d3_react_%20barchart.png)
 
-The barchart uses was taken from he [United Nations World Population Prospects 2019 Dataset](https://population.un.org/wpp/Download/Standard/Population/), cleaned and formatted as a [CSV](https://gist.github.com/0surface/78122e6e1e8b81771376b923f6728e7f)
+The barchart uses data that was taken from the [United Nations World Population Prospects 2019 Dataset](https://population.un.org/wpp/Download/Standard/Population/), cleaned and formatted as a [CSV](https://gist.github.com/0surface/78122e6e1e8b81771376b923f6728e7f).
+
+## Scatter Plot
+
+![D3.js_scatterplot](/public/images/D3.js_scatterplot.png)
+
+The scatte plot uses was Originally published at [UCI Machine Learning Repository: Iris Data Set](https://archive.ics.uci.edu/ml/datasets/Iris). The cleaned and formatted data was originally taken Curran's GitHubGist, presented as a [CSV](https://gist.github.com/0surface/eea4f7bc5a12967236ecda853f8d370a
