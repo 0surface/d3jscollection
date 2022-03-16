@@ -1,5 +1,5 @@
 import React from 'react'
-import { scaleLinear, scaleTime, timeFormat, min, max } from 'd3'
+import { scaleLinear, scaleTime, timeFormat, extent, min } from 'd3'
 import './styles/global.css'
 import { useData } from './components/linechart/useData'
 import { AxisBottom } from './components/linechart/AxisBottom'
@@ -33,13 +33,14 @@ const Linechart = () => {
   const xAxisTickFormat = timeFormat('%a')
 
   const xScale = scaleTime()
-    .domain([min(data, xValue), max(data, xValue)])
+    .domain(extent(data, xValue))
     .range([0, innerWidth])
     .nice()
 
   const yScale = scaleLinear()
-    .domain([min(data, yValue), max(data, yValue)])
+    .domain(extent(data, yValue))
     .range([innerHeight, 0])
+    .nice()
 
   return (
     <svg width={width} height={height}>
@@ -48,15 +49,14 @@ const Linechart = () => {
           xScale={xScale}
           innerHeight={innerHeight}
           tickFormat={xAxisTickFormat}
-          tickoffset={5}
+          tickoffset={7}
         />
-        <AxisLeft yScale={yScale} innerWidth={innerWidth} />
+        <AxisLeft yScale={yScale} innerWidth={innerWidth} tickoffset={7} />
         <text
           className="axis-label"
           textAnchor="middle"
           x={innerWidth / 2}
           y={innerHeight + xAxisLabelOffset}
-          tickoffset={5}
         >
           {xAxisLabel}
         </text>

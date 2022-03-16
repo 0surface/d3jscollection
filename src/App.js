@@ -19,6 +19,13 @@ const App = () => {
         </button>
         <button
           className="action"
+          id="linechart"
+          onClick={() => setActiveplot('linechart')}
+        >
+          Line Chart
+        </button>
+        <button
+          className="action"
           id="barchart"
           onClick={() => setActiveplot('barchart')}
         >
@@ -31,19 +38,12 @@ const App = () => {
         >
           Scatter Plot
         </button>
-        <button
-          className="action"
-          id="linechart"
-          onClick={() => setActiveplot('linechart')}
-        >
-          Line Chart
-        </button>
       </div>
+      {(activeplot === 'linechart' || activeplot === 'all') && <Linechart />}
       {(activeplot === 'barchart' || activeplot === 'all') && <Barchart />}
       {(activeplot === 'scatterplot' || activeplot === 'all') && (
         <Scatterplot />
       )}
-      {(activeplot === 'linechart' || activeplot === 'all') && <Linechart />}
     </div>
   )
 }

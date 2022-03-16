@@ -30,7 +30,8 @@ body {
 .marks path {
   stroke: #137b80;
   stroke-width: 5;
-  stroke-linejoin: round;
+  stroke-linejoin: round; /* lines sharp curves are joined by round smooth curves*/
+  stroke-linecap: round; /* endings of points will look round not sharp jaggered ends */
 }
 
 .action {
