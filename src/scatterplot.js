@@ -12,6 +12,7 @@ const width = 960
 const height = 500
 const margin = { top: 50, right: 30, bottom: 65, left: 220 }
 const xAxisLabelOffset = 50
+const yAxisLabelOffset = 50
 
 const Scatterplot = () => {
   const data = useData(csvUrl)
@@ -24,7 +25,10 @@ const Scatterplot = () => {
   const innerWidth = width - margin.right - margin.left
 
   const xValue = (d) => d.sepal_length
+  const xAxisLabel = 'Sepal Length'
+
   const yValue = (d) => d.sepal_width
+  const yAxisLabel = 'Sepal Width'
 
   const siFormat = format('.2s')
   const xAxisTickFormat = (tickValue) => siFormat(tickValue).replace('G', 'B')
@@ -52,7 +56,17 @@ const Scatterplot = () => {
           x={innerWidth / 2}
           y={innerHeight + xAxisLabelOffset}
         >
-          Population
+          {xAxisLabel}
+        </text>
+
+        <text
+          className="axis-label"
+          textAnchor="middle"
+          transform={`translate(${-yAxisLabelOffset},${
+            innerHeight / 2
+          }) rotate(-90)`}
+        >
+          {yAxisLabel}
         </text>
         <Marks
           data={data}
