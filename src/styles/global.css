@@ -22,3 +22,9 @@ body {
   font-size: 2.5em;
   fill: #635f5d;
 }
+.action {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  fill: blue;
+  margin: 3px 3px;
+}
