@@ -6,6 +6,7 @@ export const Marks = ({
   xValue,
   yValue,
   toolTipFormat,
+  circleRadius = 10,
 }) =>
   data.map((d) => (
     <circle
@@ -13,7 +14,7 @@ export const Marks = ({
       key={Math.random(0, 100000)}
       cx={xScale(xValue(d))}
       cy={yScale(yValue(d))}
-      r={10}
+      r={circleRadius}
     >
       <title>{toolTipFormat(xValue(d))}</title>
     </circle>

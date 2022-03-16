@@ -78,6 +78,7 @@ const Scatterplot = () => {
           xValue={xValue}
           yValue={yValue}
           toolTipFormat={xAxisTickFormat}
+          circleRadius={7}
         />
       </g>
     </svg>
