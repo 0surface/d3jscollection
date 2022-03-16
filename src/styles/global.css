@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tick line {
+  stroke: #c0c0bb;
+}
+
+.tick text {
+  fill: #635f5d;
+}
+
+.mark {
+  fill: #137b80;
+}
+
+.axis-label {
+  font-size: 2.5em;
+  fill: #635f5d;
+}
