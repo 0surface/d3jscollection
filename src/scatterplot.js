@@ -1,5 +1,5 @@
 import React from 'react'
-import { scaleLinear, extent, format, min, max } from 'd3'
+import { scaleLinear, format, min, max } from 'd3'
 import './styles/global.css'
 import { useData } from './components/scatterplot/useData'
 import { AxisBottom } from './components/scatterplot/AxisBottom'
@@ -45,7 +45,7 @@ const Scatterplot = () => {
           innerHeight={innerHeight}
           tickFormat={xAxisTickFormat}
         />
-        <AxisLeft yScale={yScale} />
+        <AxisLeft yScale={yScale} innerWidth={innerWidth} />
         <text
           className="axis-label"
           textAnchor="middle"
