@@ -1,7 +1,9 @@
-function App() {
+import Barchart from './barchart'
+
+const App = () => {
   return (
     <div className="App">
-      <p>This is the App</p>
+      <Barchart />
     </div>
   )
 }
