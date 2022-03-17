@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Barchart from './barchart'
 import Scatterplot from './scatterplot'
 import Linechart from './linechart'
+import Worldmap from './worldmap'
 import './styles/global.css'
 
 const App = () => {
@@ -16,6 +17,13 @@ const App = () => {
           onClick={() => setActiveplot('all')}
         >
           Show All
+        </button>
+        <button
+          className="action"
+          id="worldmap"
+          onClick={() => setActiveplot('worldmap')}
+        >
+          World Map
         </button>
         <button
           className="action"
@@ -39,6 +47,7 @@ const App = () => {
           Scatter Plot
         </button>
       </div>
+      {(activeplot === 'worldmap' || activeplot === 'all') && <Worldmap />}
       {(activeplot === 'linechart' || activeplot === 'all') && <Linechart />}
       {(activeplot === 'barchart' || activeplot === 'all') && <Barchart />}
       {(activeplot === 'scatterplot' || activeplot === 'all') && (
