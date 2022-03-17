@@ -6,7 +6,7 @@ import { AxisBottom } from './components/worldmap/AxisBottom'
 import { AxisLeft } from './components/worldmap/AxisLeft'
 import { Marks } from './components/worldmap/Marks'
 
-const csvUrl = process.env.REACT_APP_WORLDMAP_DATA
+const jsonUrl = process.env.REACT_APP_WORLDMAP_DATA
 
 const width = 960
 const height = 500
@@ -15,7 +15,7 @@ const xAxisLabelOffset = 50
 const yAxisLabelOffset = 40
 
 const Worldmap = () => {
-  const data = useData(csvUrl)
+  const data = useData(jsonUrl)
 
   if (!data) {
     return <pre>Loading...</pre>
