@@ -1,6 +1,6 @@
-import { geoEqualEarth, geoPath } from 'd3'
+import { geoNaturalEarth1, geoPath } from 'd3'
 
-const projection = geoEqualEarth()
+const projection = geoNaturalEarth1()
 const path = geoPath(projection)
 
 export const Marks = ({ data: { land, interiors } }) => (
