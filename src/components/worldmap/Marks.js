@@ -4,9 +4,14 @@ const projection = geoEqualEarth()
 const path = geoPath(projection)
 
 export const Marks = ({ data }) => (
-  <g className="marks" key={data.features.indexOf}>
+  <g className="mapmarks">
+    <path className="sphere" d={path({ type: 'Sphere' })} />
     {data.features.map((feature) => (
-      <path d={path(feature)} />
+      <path
+        className="feature"
+        key={Math.random(0, 10000000)}
+        d={path(feature)}
+      />
     ))}
   </g>
 )

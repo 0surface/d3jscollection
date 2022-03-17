@@ -5,8 +5,6 @@ import { feature } from 'topojson-client'
 export const useData = (jsonUrl) => {
   const [data, setData] = useState(null)
 
-  console.log('geojsondata::', data)
-
   useEffect(() => {
     json(jsonUrl).then((topjsonData) => {
       const { countries } = topjsonData.objects

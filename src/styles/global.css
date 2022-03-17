@@ -34,6 +34,15 @@ body {
   stroke-linecap: round; /* endings of points will look round not sharp jaggered ends */
 }
 
+.mapmarks .feature {
+  fill: #137b80;
+  stroke: #c0c0bb;
+}
+
+.mapmarks .sphere {
+  fill: #ececec;
+}
+
 .action {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
