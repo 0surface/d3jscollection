@@ -1,10 +1,9 @@
 import React from 'react'
 import { scaleBand, scaleLinear, max, format } from 'd3'
-import './styles/global.css'
-import { useData } from './components/barchart/useData'
-import { AxisBottom } from './components/barchart/AxisBottom'
-import { AxisLeft } from './components/barchart/AxisLeft'
-import { Marks } from './components/barchart/Marks'
+import { useData } from './useData'
+import { AxisBottom } from './AxisBottom'
+import { AxisLeft } from './AxisLeft'
+import { Marks } from './Marks'
 
 const csvUrl = process.env.REACT_APP_BARCHART_DATA
 

@@ -1,9 +1,7 @@
 import React from 'react'
 
-import './styles/global.css'
-import { useData } from './components/worldmap/useData'
-
-import { Marks } from './components/worldmap/Marks'
+import { useData } from './useData'
+import { Marks } from './Marks'
 
 const jsonUrl = process.env.REACT_APP_WORLDMAP_DATA
 
