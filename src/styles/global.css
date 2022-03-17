@@ -52,6 +52,11 @@ body {
   stroke: #339498;
 }
 
+.mapmarks .graticules {
+  fill: none;
+  stroke: #dadada;
+}
+
 .mapmarks .sphere {
   fill: #ececec;
 }
