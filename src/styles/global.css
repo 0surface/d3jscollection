@@ -2,8 +2,15 @@
 
 body {
   margin: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: 'Poppins', sans-serif;
+}
+
+.action {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  fill: blue;
+  margin: 3px 3px;
 }
 
 .tick line {
@@ -34,9 +41,24 @@ body {
   stroke-linecap: round; /* endings of points will look round not sharp jaggered ends */
 }
 
-.action {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  fill: blue;
-  margin: 3px 3px;
+/* <World map>*/
+
+.mapmarks .land {
+  fill: #137b80;
 }
+
+.mapmarks .interiors {
+  fill: none;
+  stroke: #339498;
+}
+
+.mapmarks .graticules {
+  fill: none;
+  stroke: #dadada;
+}
+
+.mapmarks .sphere {
+  fill: #ececec;
+}
+
+/* </World map>*/
