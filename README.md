@@ -22,4 +22,4 @@ The scatter plot uses was Originally published at [UCI Machine Learning Reposito
 
 ![D3.js_linechart](/public/images/D3.js_linechart.png)
 
-This line chart shows temperature in degrees celcius in San Francisco for one week. The data was collected from the (now defunct) [Data Canvas - Sense Your City API](http://grayarea.org/initiative/data-canvas-sense-your-city/). The cleaned [CSV] file is taken from Curran's [GitHubGist](https://gist.github.com/curran/90240a6d88bdb1411467b21ea0769029) presented as a [CSV](https://gist.github.com/0surface/e8103ae8478baecd904c57847709f0c0#file-week_temperature_sf-csv)
+This line chart shows temperature in degrees celcius in San Francisco for one week. The data was collected from the (now defunct) [Data Canvas - Sense Your City API](http://grayarea.org/initiative/data-canvas-sense-your-city/). The cleaned [CSV] file is originally taken from Curran's [GitHubGist](https://gist.github.com/curran/90240a6d88bdb1411467b21ea0769029) presented as a [CSV](https://gist.github.com/0surface/e8103ae8478baecd904c57847709f0c0#file-week_temperature_sf-csv)

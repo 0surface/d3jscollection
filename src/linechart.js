@@ -1,5 +1,5 @@
 import React from 'react'
-import { scaleLinear, scaleTime, timeFormat, extent, min } from 'd3'
+import { scaleLinear, scaleTime, timeFormat, extent } from 'd3'
 import './styles/global.css'
 import { useData } from './components/linechart/useData'
 import { AxisBottom } from './components/linechart/AxisBottom'
